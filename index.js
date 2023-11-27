@@ -8,6 +8,18 @@ app.get('/', (req, res) => {
 	res.send('Velkommen til min hjemmeside')
 })
 
+
+
+app.get('/songs', (req, res) => {
+	console.log(req.query);
+	res.send('Sange - List alle')
+})
+app.post('/songs', (req, res) => {
+	res.send('Sange - Opret ny sang')
+})
+
+
+
 // 404
 app.get('*', (req, res) => {
 	res.send('Siden du leder efter, blev ikke fundet')
