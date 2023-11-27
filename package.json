@@ -1,0 +1,23 @@
+{
+  "name": "h1we080123",
+  "version": "1.0.0",
+  "description": "Test for backend udvikling i NodeJS",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Webudvikler-TechCollege/H1WE080123.git"
+  },
+  "author": "Heinz K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Webudvikler-TechCollege/H1WE080123/issues"
+  },
+  "homepage": "https://github.com/Webudvikler-TechCollege/H1WE080123#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
