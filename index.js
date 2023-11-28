@@ -1,9 +1,9 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import db from './Config/db.config.js'
 dotenv.config()
 
 const app = express()
-const port = 4000
 
 // Router
 app.get('/', (req, res) => {
@@ -12,8 +12,10 @@ app.get('/', (req, res) => {
 
 // Sangliste - med GET parameter eksempel
 app.get('/songs', (req, res) => {
-	console.log(req.query);
-	res.send('Sange - List alle')
+	db.query(`SELECT id,title 
+				FROM song`, (error, result) => {
+			res.json(result);
+	})
 })
 
 // Sangdetaljer - med URL parameter
@@ -32,6 +34,6 @@ app.get('*', (req, res) => {
 	res.send('Siden du leder efter, blev ikke fundet')
 })
 
-app.listen(port, () => {
-	console.log(`Server kører på port ${port}`);
+app.listen(process.env.PORT, () => {
+	console.log(`Server kører på port http://localhost:${process.env.PORT}`);
 })
