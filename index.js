@@ -13,8 +13,8 @@ app.get("/", (req, res) => {
 // Sangliste - med GET parameter eksempel
 app.get("/songs", (req, res) => {
   db.query(
-    `SELECT id,title 
-				FROM song`,
+    `SELECT id,Fornavn
+				FROM student`,
     (error, result) => {
       res.json(result);
     }
